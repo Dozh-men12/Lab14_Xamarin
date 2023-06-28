@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Lab14.Views.ProductList">
+    <ContentPage.Content>
+        <StackLayout>
+            <Entry Placeholder="Filter" x:Name="txtFilter" HorizontalOptions="FillAndExpand"/>
+            <Button Text="ShowByText" Clicked="Button_Clicked_2"/>
+
+            <ListView x:Name="lvProducts">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="{Binding Name}"></Label>
+                                <Label Text="{Binding Description}"></Label>
+                                <Label Text="{Binding Precio}"></Label>
+                                <Label Text="{Binding Fecha}"></Label>
+                            </StackLayout>
+
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
